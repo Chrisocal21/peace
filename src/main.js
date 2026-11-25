@@ -2019,7 +2019,7 @@ addEventListener('keydown', (e) => {
   else if (c === 'KeyN' && !e.shiftKey && !e.ctrlKey) { autoGrade = !autoGrade; toast(autoGrade ? 'Auto-level on: foundations flatten the ground under them' : 'Auto-level off: foundations only fit where the ground is already level'); }
   if (c === 'KeyQ') { if (isFree()) free.y -= e.shiftKey ? 3 : 0.5; else bp.levelOffset--; }
   if (c === 'KeyE') { if (isFree()) free.y += e.shiftKey ? 3 : 0.5; else bp.levelOffset++; }
-  if (c === 'KeyC') { bp.nx = 0; bp.nz = 0; bp.levelOffset = 0; }
+  if (c === 'KeyC' && !player.fly) { bp.nx = 0; bp.nz = 0; bp.levelOffset = 0; }
   if (c.startsWith('Arrow')) {
     e.preventDefault();
     const [fx, fz] = snapDir(-Math.sin(player.yaw), -Math.cos(player.yaw));
@@ -2080,7 +2080,7 @@ function update(dt) {
     const sp = (sprint ? 28 : 12) * dt;
     camera.position.addScaledVector(fwd, mz * sp).addScaledVector(right, mx * sp);
     if (keys.has('Space')) camera.position.y += sp;
-    if (keys.has('ControlLeft') || keys.has('KeyX')) camera.position.y -= sp;
+    if (keys.has('ControlLeft') || keys.has('KeyX') || keys.has('KeyC')) camera.position.y -= sp;
     return;
   }
 

@@ -66,7 +66,7 @@ export function migrateLegacy() {
   if (m) setCurrent(m.id);
 }
 
-export const DEFAULT_SETTINGS = { sens: 1, invertY: false, fov: 63, quality: 'high', shadows: true, help: false, flyMode: false };
+export const DEFAULT_SETTINGS = { sens: 1, invertY: false, fov: 63, quality: 'high', shadows: true, help: false, flyMode: true };
 export function loadSettings() {
   try { return { ...DEFAULT_SETTINGS, ...(JSON.parse(get(SETTINGS)) || {}) }; } catch { return { ...DEFAULT_SETTINGS }; }
 }

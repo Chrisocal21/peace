@@ -11,7 +11,7 @@ function ago(t) {
   return Math.round(s / 86400) + ' days ago';
 }
 const CONTROLS = [
-  ['Move', 'WASD · Shift sprint · Space jump · (flying: Space up, Ctrl or X down)'], ['Fly / walk', 'F (turn Fly mode on in Settings first)'], ['Build menu', 'Tab or B'], ['Hotbar', '1 – 0 · hover a piece in the menu + number to assign'],
+  ['Move', 'WASD · Shift sprint · Space jump · (flying: Space up, C / Ctrl / X down)'], ['Fly / walk', 'F (turn Fly mode on in Settings first)'], ['Build menu', 'Tab or B'], ['Hotbar', '1 – 0 · hover a piece in the menu + number to assign'],
   ['Place / zoop', 'Click · hold and drag to repeat'], ['Remove', 'Right-click'], ['Rotate', 'Wheel or R · Shift + wheel = 15°'], ['Snap to edges', 'G toggles'], ['Auto-level ground', 'N: foundations flatten the land under them'],
   ['Level up / down', 'Q / E'], ['Nudge', 'Arrows · , and . change the step'], ['Material', 'M · Shift + M for roofs'], ['Customize', 'U panel · + / − size · PgUp / PgDn lift · Backspace reset'],
   ['Free placement', 'H (clip pieces anywhere) · [ ] grid'], ['Sample a piece', 'Middle-click or I'], ['Repaint / swap / open', 'V / Z / O while aiming at a piece'], ['Undo / redo', 'Ctrl + Z / Ctrl + Y'],
